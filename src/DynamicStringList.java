@@ -1,9 +1,14 @@
 public class DynamicStringList implements StringList {
 
+    String[] list;
+
+    public DynamicStringList() {
+
+    }
+
     @Override
     public String get(int index) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'get'");
+      return list[index];
     }
 
     @Override
