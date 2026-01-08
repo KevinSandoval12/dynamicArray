@@ -1,10 +1,11 @@
 public class DynamicStringList implements StringList {
 
-    String[] list;
+    public String[] list;
 
     public DynamicStringList() {
-
+        list = new String[4];
     }
+
 
     @Override
     public String get(int index) {
