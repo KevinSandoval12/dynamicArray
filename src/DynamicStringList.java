@@ -39,7 +39,13 @@ public class DynamicStringList implements StringList {
 
     @Override
     public String remove(int index) {
-
+        String removed = list[index];
+        while(index < listSize){
+            list[index] = list[index+1];
+            index++;
+        }
+        listSize--;
+        return removed;
     }
 
     @Override
