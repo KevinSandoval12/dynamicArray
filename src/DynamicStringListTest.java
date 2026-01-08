@@ -12,4 +12,16 @@ public class DynamicStringListTest {
     String result = list.get(1);
     assertEquals("2", result);
   }
+
+  @Test
+  public void DynamicStringList_Get2(){
+    DynamicStringList list = new DynamicStringList();
+    list.add("1");
+    list.add("2");
+
+    String result = list.get(0);
+    assertEquals("1", result);
+  }
+
+  
 }
