@@ -1,7 +1,7 @@
 public class DynamicStringList implements StringList {
 
     private String[] list;
-    private int listSize = 1;
+    private int listSize = 0;
 
     public DynamicStringList() {
         list = new String[4];
