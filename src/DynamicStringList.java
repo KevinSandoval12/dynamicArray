@@ -4,11 +4,7 @@ public class DynamicStringList implements StringList {
     private int listSize = 0;
 
     public DynamicStringList() {
-        list = new String[4];
-    }
-
-    public DynamicStringList(int limit) {
-        list = new String[limit];
+        this.list = new String[4];
     }
 
     @Override
@@ -24,17 +20,17 @@ public class DynamicStringList implements StringList {
     @Override
     public void add(String value) {
       // edge case to check if we need to make a new list
-      if (listSize == capacity()) {
+      if (listSize == list.length) {
         String[] newList = new String[list.length * 2];
         for (int i = 0; i < list.length; i++) {
           newList[i] = list[i];
         }
-        listSize++;
         newList[listSize] = value;
+        this.list = newList;
       }
 
       // adds to end of list
-      list[listSize] = value;
+      list[listSize++] = value;
     }
 
     @Override
