@@ -23,14 +23,25 @@ public class DynamicStringList implements StringList {
 
     @Override
     public void add(String value) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'add'");
+      // edge case to check if we need to make a new list
+      if (listSize == capacity()) {
+        String[] newList = new String[list.length * 2];
+        for (int i = 0; i < list.length; i++) {
+          newList[i] = list[i];
+        }
+        listSize++;
+        newList[listSize] = value;
+      }
+
+      // adds to end of list
+      list[listSize] = value;
     }
 
     @Override
     public String remove(int index) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'remove'");
+      for (int i = list.length - 1; i > 0; i--) {
+        
+      }
     }
 
     @Override
