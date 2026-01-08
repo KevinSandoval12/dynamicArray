@@ -23,5 +23,4 @@ public class DynamicStringListTest {
     assertEquals("1", result);
   }
 
-  
 }
