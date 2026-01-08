@@ -14,8 +14,7 @@ public class DynamicStringList implements StringList {
 
     @Override
     public void set(int index, String value) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'set'");
+      list[index] = value;
     }
 
     @Override
