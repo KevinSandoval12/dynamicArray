@@ -1,11 +1,15 @@
 public class DynamicStringList implements StringList {
 
-    public String[] list;
+    private String[] list;
+    private int listSize = 1;
 
     public DynamicStringList() {
         list = new String[4];
     }
 
+    public DynamicStringList(int limit) {
+        list = new String[limit];
+    }
 
     @Override
     public String get(int index) {
@@ -31,14 +35,12 @@ public class DynamicStringList implements StringList {
 
     @Override
     public int size() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'size'");
+        return listSize;
     }
 
     @Override
     public int capacity() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'capacity'");
+        return list.length;
     }
     
 }
