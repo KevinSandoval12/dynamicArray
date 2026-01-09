@@ -63,4 +63,25 @@ public class DynamicStringListTest {
     String result = list.remove(0);
     assertEquals("1", result);
   }
+
+  @Test
+  public void testListSize(){
+    DynamicStringList list = new DynamicStringList();
+    list.add("1");
+    list.add("2");
+    list.add("3");
+    list.add("4");
+
+    assertEquals(list.size(), 4);
+  }
+
+  @Test
+  public void testCapacity(){
+    DynamicStringList list = new DynamicStringList();
+    list.add("1");
+    list.add("2");
+
+    assertEquals(list.capacity(), 4);
+  }
+
 }
