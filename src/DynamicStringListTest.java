@@ -39,4 +39,28 @@ public class DynamicStringListTest {
     assertEquals("2", actual2);
   }
   
+
+  @Test
+  public void DynamicStringList_Set(){
+    DynamicStringList list = new DynamicStringList();
+    list.add("1");
+    list.add("2");
+    list.add("3");
+    list.add("4");
+
+    list.set(2, "momma");
+    assertEquals(list.get(2), "momma");
+  }
+
+  @Test
+  public void DynamicStringList_Remove(){
+    DynamicStringList list = new DynamicStringList();
+    list.add("1");
+    list.add("2");
+    list.add("3");
+    list.add("4");
+
+    String result = list.remove(0);
+    assertEquals("1", result);
+  }
 }
